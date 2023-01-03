@@ -1,3 +1,4 @@
+import leetCodeEasy.addBinaryEasy;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigInteger;
@@ -9,8 +10,8 @@ class addBinaryEasyTest {
     @Test
     void convertToDecimal() {
         assertEquals(new BigInteger("526700554598729746900966573811"), addBinaryEasy.convertToDecimal("110101001011101110001111100110001010100001101011101010000011011011001011101111001100000011011110011"));
-//        assertEquals(5, addBinaryEasy.convertToDecimal("101"));
-//        assertEquals(345, addBinaryEasy.convertToDecimal("000101011001"));
+//        assertEquals(5, leetCodeEasy.addBinaryEasy.convertToDecimal("101"));
+//        assertEquals(345, leetCodeEasy.addBinaryEasy.convertToDecimal("000101011001"));
     }
 
     @Test

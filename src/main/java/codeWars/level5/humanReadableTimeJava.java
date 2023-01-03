@@ -1,3 +1,5 @@
+package codeWars.level5;
+
 public class humanReadableTimeJava {
 
     public static String makeReadable(int seconds){

@@ -1,3 +1,4 @@
+package leetCodeEasy;
 
 public class MergeSortedArrayEasy {
     static public class ListNode {
