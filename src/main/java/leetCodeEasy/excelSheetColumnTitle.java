@@ -6,11 +6,21 @@ public class excelSheetColumnTitle {
     public static String convertToTitle(int columnNumber){
         StringBuilder built = new StringBuilder();
         boolean iterating = true;
-        while(iterating){
+        int remainder = (columnNumber) % 26;
+        columnNumber = (columnNumber) / 26;
 
-            int remainder = (columnNumber) % 26;
-            int inRange = columnNumber <= 26 && columnNumber >= 0 ? Math.max(columnNumber, remainder): remainder ;
-            System.out.println(inRange);
+        while(iterating){
+            int inRange;
+            int prevRem = remainder;
+            remainder = columnNumber % 26;
+            if(columnNumber <= 26 && columnNumber > 1){
+                inRange = columnNumber;
+            }else if(remainder != 0 || remainder < prevRem){
+                inRange = remainder;
+            }else{
+                inRange = prevRem;
+            }
+
             switch(inRange){
                 case 1 -> built.append('A');
                 case 2 -> built.append('B');
@@ -40,7 +50,7 @@ public class excelSheetColumnTitle {
                 case 26 -> built.append('Z');
                 default -> iterating = false;
             }
-            columnNumber = (columnNumber) / 26;
+            columnNumber = columnNumber /26;
         }
         return built.reverse().toString();
     }
