@@ -1,4 +1,4 @@
-package leetCodeEasy;
+package leetCodeMedium;
 
 public class addTwoNumbersMedium {
     public class ListNode{
